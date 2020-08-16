@@ -1,0 +1,29 @@
+﻿<Window x:Class="LibraryFnlProject.Windows.CustomersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryFnlProject.Windows"
+        mc:Ignorable="d"
+        Title="CustomersWindow" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="LblFullname" Content="Fullname" HorizontalAlignment="Left" Margin="36,10,0,0" VerticalAlignment="Top" Height="27" Width="132"/>
+        <TextBox x:Name="TxtFullname" HorizontalAlignment="Left" Margin="36,42,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="LblFinCode" Content="Fin Code" HorizontalAlignment="Left" Margin="36,96,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.417,1.851" Height="29" Width="120"/>
+        <TextBox x:Name="TxtFinCode" HorizontalAlignment="Left" Margin="36,130,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="LblPhone" Content="Phone Number" HorizontalAlignment="Left" Margin="36,195,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.417,2.869" Height="22" Width="120"/>
+        <TextBox x:Name="TxtPhone" HorizontalAlignment="Left" Margin="36,241,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="BtnAddCustomer" Content="Add" HorizontalAlignment="Left" Margin="36,297,0,0" VerticalAlignment="Top" Width="120" Click="BtnAddCustomer_Click"/>
+        <DataGrid AutoGenerateColumns="False" x:Name="DgvCustomer" Margin="217,0,0,0" SelectionChanged="DgvCustomer_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="0.1*" Header="Id" Binding="{Binding Path=Id}" />
+                <DataGridTextColumn Width="0.3*" Header="Fullname" Binding="{Binding Path=FullName}"/>
+                <DataGridTextColumn Width="0.3*" Header="Fin Code" Binding="{Binding Path=Fin}" />
+                <DataGridTextColumn Width="0.3*" Header="Phone Number" Binding="{Binding Path=Phone}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="BtnUpdate" Content="Update" HorizontalAlignment="Left" Visibility="Hidden" Margin="36,334,0,0" VerticalAlignment="Top" Width="120" Click="BtnUpdate_Click"/>
+        <Button x:Name="BtnDelete" Content="Delete" HorizontalAlignment="Left"  Visibility="Hidden" Margin="36,297,0,0" VerticalAlignment="Top" Width="120" Click="BtnDelete_Click"/>
+
+    </Grid>
+</Window>

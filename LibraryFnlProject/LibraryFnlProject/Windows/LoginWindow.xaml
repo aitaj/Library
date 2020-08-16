@@ -1,0 +1,17 @@
+﻿<Window x:Class="LibraryFnlProject.Windows.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryFnlProject.Windows"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="450" Width="300">
+    <Grid>
+        <Label x:Name="LblUsername" Content="UserName" HorizontalAlignment="Left" Margin="79,32,0,0" VerticalAlignment="Top" Height="32" Width="120"/>
+        <TextBox x:Name="TxtUsername" HorizontalAlignment="Left" Margin="79,69,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="32"/>
+        <Label x:Name="LblPassword" Content="Password" HorizontalAlignment="Left" Margin="79,134,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtPassword" HorizontalAlignment="Left" Margin="79,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="BtnLogIn" Content="Log in" HorizontalAlignment="Left" Margin="79,252,0,0" VerticalAlignment="Top" Width="120" Click="BtnLogIn_Click"/>
+        
+    </Grid>
+</Window>
